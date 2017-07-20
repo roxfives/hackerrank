@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "$(sort -n -k2 -t'|' /dev/stdin)"
+echo "$(sort -n -k2 -t'|' -r /dev/stdin)"
