@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo $(sort -n /dev/stdin)
+echo "$(sort -n /dev/stdin)"
