@@ -1,4 +1,4 @@
 #!/bin/bash
 
-array=($(cat /dev/stdio))
+array=($(cat /dev/stdin))
 echo ${array[@]}
