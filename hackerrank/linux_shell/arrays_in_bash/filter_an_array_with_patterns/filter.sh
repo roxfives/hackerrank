@@ -1,6 +1,5 @@
 #!/bin/bash
 
 array=($(cat /dev/stdin))
-array=(${array[@]/*A*/})
-array=(${array[@]/*a*/})
+array=(${array[@]/*[Aa]*/})
 echo ${array[@]}
