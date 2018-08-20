@@ -6,41 +6,20 @@ def main():
 
     merge_the_tools(string, k)
 
-# def merge_the_tools(string, k):
-#     n = len(string)/k
-#     # print len(string)
-#     rst = []
-
-#     for i in range(0, n):
-#         rst.append(string[i*k:(i+1)*k])
-#         # print('append: ' + rst[i])
-
-#         rmvd = 0
-#         for j in range(0, len(rst[i])):
-#             if(rst[i].find(rst[i][j-rmvd]) < j-rmvd):
-#                 if(j+1 >= len(rst[i])+rmvd):
-#                     rst[i] = rst[i][:j-rmvd]
-#                 else:
-#                     rst[i] = rst[i][:j-rmvd] + rst[i][j+1-rmvd:]
-                
-#                 rmvd += 1
-
-#     for elem in rst:
-        # print elem
-
+# The function responsible for merging
 def merge_the_tools(string, k):
-    buff = ''
-    i = 0
+    buff = ''   # Buffer to hold each word
+    i = 0       # Counter to checkhow many letters have been checked
     for lt in string:
-        if(buff.find(lt) < 0):
+        if(buff.find(lt) < 0): # If the letter isnt in the word yet
             buff += lt
         
         i += 1
-        if(i == k):
+        if(i == k):            # If the chunk has been finished
             print buff
             buff = ''
             i = 0
             
-
+# Calls main
 if __name__ == '__main__':
     main()
